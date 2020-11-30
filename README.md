@@ -1,7 +1,15 @@
-# network-scanner
+# network-scanner-code
  Simple network scanner built with Scapy for Python
 
-## Usage
+<p align="left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Wifi.png/1200px-Wifi.png" width="300" height="300" />
+</p>
+
+## Disclaimer:
+1. USE AT OWN DISCRETION
+2. FOR EDUCATIONAL PURPOSES ONLY
+
+## Instructions:
 Perform either an ARP scan or TCP scan.
 - An ARP scan will send ARP requests to all devices on the local network, and collect the ARP replies to discover IP address to MAC address mappings.
 - A TCP scan will send TCP SYN packets to all specified ports, and collect the SYN+ACK replies to discover which ports are open.
