@@ -2,7 +2,7 @@
  Simple network scanner built with Scapy for Python
 
 <p align="left">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Wifi.png/1200px-Wifi.png" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Wifi.png/1200px-Wifi.png" width="450" height="200" />
 </p>
 
 ## Disclaimer:
