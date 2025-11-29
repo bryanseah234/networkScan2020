@@ -1,60 +1,67 @@
-# network-scanner-code
- Simple network scanner built with Scapy for Python
+# networkScan2020
 
-<p align="left">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Wifi.png/1200px-Wifi.png" width="450" height="200" />
-</p>
+A simple network scanner built with Scapy for Python
 
-## Disclaimer:
-1. USE AT OWN DISCRETION
-2. FOR EDUCATIONAL PURPOSES ONLY
+## Description
 
-## Instructions:
-Perform either an ARP scan or TCP scan.
-- An ARP scan will send ARP requests to all devices on the local network, and collect the ARP replies to discover IP address to MAC address mappings.
-- A TCP scan will send TCP SYN packets to all specified ports, and collect the SYN+ACK replies to discover which ports are open.
+This project is a command-line network scanning tool that allows users to discover devices on a local network and identify open ports. It uses the Scapy library to send ARP requests for network discovery and TCP SYN packets for port scanning. Ideal for network administrators and security enthusiasts who need quick network reconnaissance capabilities.
 
-If you are on a UNIX-based system, please run the script as root (use sudo).
+## Features
+
+- ARP scanning to discover devices on a local network and map IP addresses to MAC addresses
+- TCP port scanning using SYN packets to identify open ports
+- Support for scanning individual ports or a range of ports
+- Command-line interface with helpful usage instructions
+
+## Technologies Used
+
+- Python 3
+- Scapy (packet manipulation library)
+- argparse (command-line argument parsing)
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/bryanseah234/networkScan2020.git
+
+# Navigate to project directory
+cd networkScan2020
+
+# Install dependencies
+pip install scapy
 ```
-usage: scanner.py [-h] {ARP,TCP} ...
 
-positional arguments:
-  {ARP,TCP}   Command to perform.
-    ARP       Perform a network scan using ARP requests.
-    TCP       Perform a TCP scan using SYN packets.
+## Usage
 
-optional arguments:
-  -h, --help  show this help message and exit
+```bash
+# ARP Scan - Discover devices on a local network
+sudo python3 scanner.py ARP 192.168.1.1/24
+
+# TCP Scan - Scan specific ports
+sudo python3 scanner.py TCP 192.168.1.1 22 80 443
+
+# TCP Scan - Scan a range of ports
+sudo python3 scanner.py TCP 192.168.1.1 --range 0 1000
 ```
+
+**Note:** On UNIX-based systems, run the script as root (use `sudo`) to allow raw packet operations.
+
 ### ARP Scan
-Either an IP address or IP address range can be used. For example, ```python3 scanner.py ARP 192.168.2.1/24``` scans all IP addresses in the 192.168.2.0/24 subnet.
-```
-usage: scanner.py ARP [-h] IP
-
-positional arguments:
-  IP          An IP address (e.g. 192.168.1.1) or address range (e.g.
-              192.168.1.1/24) to scan.
-
-optional arguments:
-  -h, --help  show this help message and exit
-```
+Sends ARP requests to all devices on the local network and collects the ARP replies to discover IP address to MAC address mappings. Either an IP address or IP address range can be used.
 
 ### TCP Scan
-Either specific ports or a range of ports can be used. For example, ```python3 scanner.py TCP 192.168.2.1 --range 0 1000``` scans all ports from 0 to 1000.
-```
-usage: scanner.py TCP [-h] [--range] IP ports [ports ...]
+Sends TCP SYN packets to specified ports and collects the SYN+ACK replies to discover which ports are open. Either specific ports or a range of ports can be scanned.
 
-positional arguments:
-  IP          An IP address or hostname to target.
-  ports       Ports to scan, delimited by spaces. When --range is specified,
-              scan a range of ports. Otherwise, scan individual ports.
+## Disclaimer
 
-optional arguments:
-  -h, --help  show this help message and exit
-  --range     Specify a range of ports. When this option is specified, <ports>
-              should be given as <low_port> <high_port>.
-```
+1. FOR EDUCATIONAL PURPOSES ONLY
+2. USE AT YOUR OWN DISCRETION
 
-### Common Errors
-If you receive ```AttributeError: 'L2bpfSocket' object has no attribute 'ins'```, you likely need to run the script as root (use sudo).
-See https://stackoverflow.com/questions/55881295/l3packetsocket-object-has-no-attribute-ins-when-using-send-command
+## License
+
+MIT License
+
+---
+
+**Author:** <a href="https://github.com/bryanseah234">bryanseah234</a>
