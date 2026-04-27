@@ -53,10 +53,30 @@ Sends ARP requests to all devices on the local network and collects the ARP repl
 ### TCP Scan
 Sends TCP SYN packets to specified ports and collects the SYN+ACK replies to discover which ports are open. Either specific ports or a range of ports can be scanned.
 
-## Disclaimer
+## ⚠️ LEGAL DISCLAIMER
 
-1. FOR EDUCATIONAL PURPOSES ONLY
-2. USE AT YOUR OWN DISCRETION
+**REQUIRES EXPLICIT AUTHORIZATION — UNAUTHORIZED USE IS ILLEGAL**
+
+This tool is for **EDUCATIONAL PURPOSES and AUTHORIZED SECURITY TESTING ONLY**.
+
+**Legal Uses:**
+- Scanning networks you own or administer
+- Penetration testing with explicit written authorization from the network owner
+- Security research in isolated lab environments
+
+**Illegal Uses:**
+- Scanning networks without authorization
+- Port scanning systems you do not own
+- Any use that violates the Computer Fraud and Abuse Act (CFAA) or equivalent laws
+
+**Legal Consequences:**
+- Computer Fraud and Abuse Act (CFAA) — USA: up to 10 years imprisonment
+- Computer Misuse Act — UK: up to 10 years imprisonment
+- Similar laws exist in virtually every country worldwide
+
+**Always obtain explicit written authorization before scanning any network or system.**
+
+USE AT YOUR OWN RISK. The author is not responsible for any misuse.
 
 ## License
 
