@@ -23,7 +23,7 @@ This project is a command-line network scanning tool that allows users to discov
 
 ```bash
 # Clone the repository
-git clone https://github.com/bryanseah234/networkScan2020.git
+git clone https://github.com/hongyime/networkScan2020.git
 
 # Navigate to project directory
 cd networkScan2020
@@ -84,4 +84,4 @@ MIT License
 
 ---
 
-**Author:** <a href="https://github.com/bryanseah234">bryanseah234</a>
+**Author:** <a href="https://github.com/hongyime">hongyime</a>
