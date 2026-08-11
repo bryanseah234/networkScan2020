@@ -1,5 +1,10 @@
 # networkScan2020
 
+Live demo: https://hongyime.github.io/networkScan2020/
+
+![Project screenshot](./screenshot.png)
+
+
 A simple network scanner built with Scapy for Python
 
 ## Description
